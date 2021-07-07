@@ -4,6 +4,7 @@ import {
   CCardHeader,
   CCardBody
 } from '@coreui/react'
+import Table from '../../components/Table'
 
 const Component = () => {
   return (
@@ -13,22 +14,7 @@ const Component = () => {
           Data Daftar Peserta Vaksinasi
         </CCardHeader>
         <CCardBody>
-          <table className="table">
-            <thead>
-            <tr>
-              <th>Heading</th>
-              <th>Example</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>
-                <p><code className="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code></p>
-              </td>
-              <td><span className="h1">h1. Bootstrap heading</span></td>
-            </tr>
-            </tbody>
-          </table>
+          <Table />
         </CCardBody>
       </CCard>
     </>
