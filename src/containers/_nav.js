@@ -14,8 +14,8 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Sivico',
-    to: '/vaksinasi',
+    name: 'Apollo',
+    to: '/presensi',
     icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
     badge: {
       color: 'primary',
@@ -24,19 +24,38 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Theme']
+    _children: ['Web Apps']
   },
   {
-    _tag: 'CSidebarNavItem',
-    name: 'Colors',
-    to: '/theme/colors',
-    icon: 'cil-drop',
+    _tag: 'CSidebarNavDropdown',
+    name: 'Apollo',
+    route: '/buttons',
+    icon: 'cil-cursor',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Histori Presensi',
+        to: '/presensi',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Laporan Presensi',
+        to: '/laporan_presensi',
+      }
+    ],
   },
   {
-    _tag: 'CSidebarNavItem',
-    name: 'Typography',
-    to: '/theme/typography',
-    icon: 'cil-pencil',
+    _tag: 'CSidebarNavDropdown',
+    name: 'Sinkron',
+    route: '/buttons',
+    icon: 'cil-cursor',
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Histori Presensi',
+        to: '/presensi',
+      }
+    ],
   },
   {
     _tag: 'CSidebarNavTitle',

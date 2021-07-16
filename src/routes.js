@@ -37,11 +37,13 @@ const Typography = React.lazy(() => import('./views/theme/typography/Typography'
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'));
 const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
-const Vaksinasi = React.lazy(() => import('./views/sivico'));
+const Apollo_histori = React.lazy(() => import('./views/apollo_histori'));
+const Apollo_laporan = React.lazy(() => import('./views/apollo_laporan'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/vaksinasi', exact: true, name: 'Vaksinasi', component: Vaksinasi},
+  { path: '/presensi', exact: true, name: 'Presensi', component: Apollo_histori},
+  { path: '/laporan_presensi', exact: true, name: 'Laporan Presensi', component: Apollo_laporan},
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', name: 'Theme', component: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', component: Colors },
