@@ -1,12 +1,17 @@
 import Axios from 'axios';
-import Cors from 'cors';
+
+const apiURL = process.env.REACT_APP_BASE_URL;
 export const apolloInstance = Axios.create({
-    baseURL: 'https://api.comboputra.co.id/absensi'
+    baseURL: `${apiURL}wsrstugu/app_rs/absensi`
 });
 
 export const sivicoInstance = Axios.create({
     baseURL: ''
 });
+
+export const asetInstance = Axios.create({
+    baseURL: `${apiURL}aset-tugurejo/`
+})
 // apolloInstance.interceptors.request.use(
 //     (config) => {
 //       let token = localStorage.getItem('user_token');

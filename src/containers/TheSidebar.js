@@ -10,9 +10,10 @@ import {
   CSidebarMinimizer,
   CSidebarNavDropdown,
   CSidebarNavItem,
+  CImg,
+  CCol
 } from '@coreui/react'
-
-import CIcon from '@coreui/icons-react'
+import logoTugu from '../assets/images/tugurejo.svg';
 
 // sidebar nav config
 import navigation from './_nav'
@@ -23,20 +24,21 @@ const TheSidebar = () => {
 
   return (
     <CSidebar
+      colorScheme="white"
       show={show}
       onShowChange={(val) => dispatch({type: 'set', sidebarShow: val })}
     >
       <CSidebarBrand className="d-md-down-none" to="/">
-        <CIcon
-          className="c-sidebar-brand-full"
-          name="logo-negative"
-          height={35}
-        />
-        <CIcon
-          className="c-sidebar-brand-minimized"
-          name="sygnet"
-          height={35}
-        />
+        <CCol lg="12">
+          <CImg 
+            src={logoTugu}
+            fluid
+            className="c-sidebar-brand-full ml-3"
+            width="150"
+            height="50"
+            align="left"
+          />
+        </CCol>
       </CSidebarBrand>
       <CSidebarNav>
 

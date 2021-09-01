@@ -1,8 +1,9 @@
-import React, { Suspense } from 'react'
+import React, { Suspense} from 'react'
 import {
-  Redirect,
   Route,
-  Switch
+  Switch,
+  withRouter,
+  Redirect
 } from 'react-router-dom'
 import { CContainer, CFade } from '@coreui/react'
 
@@ -15,7 +16,13 @@ const loading = (
   </div>
 )
 
-const TheContent = () => {
+const TheContent = (props) => {
+  // const token = localStorage.getItem('simrs_token');
+  // useEffect(() => {
+  //   if(!token){
+  //     props.history.push('/login');
+  //   }
+  // }, [])
   return (
     <main className="c-main">
       <CContainer fluid>
@@ -35,7 +42,10 @@ const TheContent = () => {
                   )} />
               )
             })}
-            <Redirect from="/" to="/dashboard" />
+            <Route path="*">
+              <Redirect to="/404" />
+            </Route>
+            
           </Switch>
         </Suspense>
       </CContainer>
@@ -43,4 +53,4 @@ const TheContent = () => {
   )
 }
 
-export default React.memo(TheContent)
+export default withRouter(TheContent)

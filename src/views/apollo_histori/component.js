@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState} from 'react';
 import {
   CCard,
   CCardHeader,
@@ -9,13 +9,20 @@ import {
   CInput,
   CCol,
   CButton,
-} from '@coreui/react'
-import CIcon from '@coreui/icons-react'
-import Table from '../../components/Table'
+} from '@coreui/react';
+import { withRouter } from 'react-router-dom';
+import CIcon from '@coreui/icons-react';
+import Table from '../../components/table';
 import {historiPresensi} from '../../services/apollo';
 
-const Component = () => {
+const Component = (props) => {
+  const token = localStorage.getItem('simrs_token');
   useEffect(() => {
+    if(!token){
+        props.history.push('/login');
+        return;
+    }
+    getData();
   }, []);
   const [dataPresensi, setDataPresensi] = useState([]);
   const [columnTable, setColumnTable] = useState([]);
@@ -78,4 +85,4 @@ const Component = () => {
   )
 }
 
-export default Component
+export default withRouter(Component)

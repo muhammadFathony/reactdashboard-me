@@ -1,7 +1,7 @@
 import { sygnet } from './sygnet'
 import { logo } from './logo'
 import { logoNegative } from './logo-negative'
-
+import { tugurejoLogo } from './tugurejo-logo'
 import {
   cibSkype,
   cibFacebook,
@@ -96,6 +96,7 @@ import {
   cilMagnifyingGlass,
   cilMap,
   cilMoon,
+  cilMobile,
   cilNotes,
   cilOptions,
   cilPaperclip,
@@ -133,7 +134,8 @@ import {
 export const icons = Object.assign({}, {
   sygnet,
   logo,
-  logoNegative
+  logoNegative,
+  tugurejoLogo
 }, {
   cilAlignCenter,
   cilAlignLeft,
@@ -194,6 +196,7 @@ export const icons = Object.assign({}, {
   cilMagnifyingGlass,
   cilMap,
   cilMoon,
+  cilMobile,
   cilNotes,
   cilOptions,
   cilPaperclip,
